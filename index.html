@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Formulário de Recrutamento</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+ <header>
+   <img src="img/logoifto.png">
+   <h1>Formulário de Recrutamento</h1>
+</header>
+ <section>
+<form action="" id="formulario" method="POST" name="formulario"><br><br>
+ <div class="col-auto"> 
+  <h1>Dados Pessoais</h1><br>
+   
+   <label for="nome">Nome completo:</label><br>
+   <input type="text" id="nome" name="nome"><br><br>
+
+   <label for="data-nascimento">Data de Nascimento:</label><br>
+   <input type="date" id="data" name="data" required><br><br>
+
+   <label for="genero">Gênero:</label><br>
+   <select id="genero" name="genero" required><br>
+       <option value="masculino">Masculino</option>
+       <option value="feminino">Feminino</option>
+       <option value="outro">Outro</option>
+   </select><br><br>
+
+   <label for="nacionalidade">Nacionalidade:</label><br>
+   <input type="text" id="nacionalidade" name="nacionalidade"><br><br>
+
+   <label for="endereco">Endereço:</label><br>
+   <input type="text" id="endereco" name="endereco"><br><br>
+
+   <label for="cidade">Cidade:</label><br>
+   <input type="text" id="cidade" name="cidade"><br><br>
+
+   <label for="estado">Estado:</label><br>
+   <input type="text" id="estado" name="estado"><br><br>
+
+   <label for="cep">CEP:</label><br>
+   <input type="number" name="cep" maxlength="8"><br><br>
+
+   <label for="telefone">Telefone:</label><br>
+   <input type="number" name="telefone" maxlength="11"><br><br>
+
+   <h1>Formação Acadêmica</h1><br>
+   
+   <select id="formacao" name="formacao" required><br>
+       <option value="tecnico">Técnico em Informática</option>
+       <option value="tecnologo">Técnologo em Análise e Desenvolvimento de Sistemas</option>
+       <option value="dois">Ambos</option>
+      <option value="nenhum">Nenhum</option>
+   </select><br><br>
+
+   <label for="outros_cursos">Além da formação técnicas profissional ofertada no IFTO,
+   já possui algum outro tipo de curso? Se sim, qual?</label><br>
+   <input id="outros_cursos" name="outros_cursos" rows="4" cols="50"></input><br><br>
+
+   <h1>Experiências Profissionais</h1><br>
+ <label for="experiencia tecnica">Possui experiências profissionais ?</label> <br>
+    <select id="experiencia" name="experiencia" required><br>
+       <option value="sim">Sim</option>
+       <option value="não">Não</option>
+   </select><br><br>
+  
+   <label for="empresa">Última ou Atual Empresa:</label><br>
+   <input type="text" id="empresa" name="empresa"><br><br>
+
+   <label for="cargo">Cargo:</label><br>
+   <input type="text" id="cargo" name="cargo"><br><br>
+
+   <label for="periodo">Inicio de Atuação (Mês/Ano – Mês/Ano):</label><br>
+   <input type="date" id="periodo" name="periodo" required><br><br>
+
+   <label for="periodo">Final de Atuação (Mês/Ano – Mês/Ano):</label><br>
+   <input type="date" id="periodo" name="periodo" required><br><br>
+
+   <label for="text">Principais atividades e responsabilades:</label><br>
+   <input type="text" id="Principais atividades e responsabilades" name="atividades"><br><br>
+
+   <label for="text">Se você possui mais experiências profissionais, liste-as abaixo</label><br>
+   <input type="text" id="experiências profissionais"><br><br>
+
+   <label for="text">Experiências Adicionais (Empresa, Cargo, Período, Atividades e Responsabilidades):</label><br>
+   <input type="text" id="Adicionais"><br><br>
+
+   <label for="experiencia tecnica">Possui habilidade tecnica?</label><br>
+    <select id="experiencia tecnica" name="experiencia tecnica" required><br>
+       <option value="sim">Sim</option>
+       <option value="não">Não</option>
+   </select><br><br>
+  
+   <label for="habilidade idiomas">Possui habilidade com idiomas?</label><br>
+     <select id="habilidade idiomas" name="habilidade idiomas" required><br>
+       <option value="sim">Sim</option>
+       <option value="não">Não</option>
+   </select><br><br>
+   
+   <label for="idiomas">Informe quais idiomas:</label><br>
+   <input type="text" id="idiomas?"><br><br>
+
+   <label for="proferencia">Nível de proferencia</label><br>
+      <select id="proferencia" name="proferencia" required><br>
+       <option value="basico">Básico</option>
+       <option value="intermediario">Intermediário</option>
+       <option value="Avançado">Avançado</option>
+      <option value="Fluente">Fluente</option>
+   </select><br><br>
+
+   <label for="tecnicas">Informe quais habilidades técnicas relevantes
+   (softwares, ferramentas, certificações):</label><br>
+   <input type="text" id="tecnicas"><br><br>
+
+   <h1>Habilidades Comportamentais</h1><br>
+
+   <label for="Comportamentais">Liste três habilidades comportamentais que você
+   considera serem suas principais qualidades profissionais:</label><br>
+   <input type="text" id="comportamentais"><br><br>
+
+   <h1>Informações Adicionais</h1><br>
+
+   <label for="salario">Pretensão Salarial:</label><br>
+   <input type="number" id="salario" required><br><br>
+
+   <label for="disponibilidade">Disponibilidade para Início:</label><br>
+   <input type="text" id="disponibilidade" required><br><br>
+
+  <input type="reset" id="Resete"><br><br>
+   <input type="submit" onclick="validar()" id="enviar"><br><br><br><br><br><br>
+
+
+
+   
+   <script>
+     function validar(){
+    var nome = document.getElementById("nome");
+    var nacionalidade = document.getElementById("nacionalidade"); 
+    var endereco = document.getElementById("endereco");
+    var cidade = document.getElementById("cidade");
+    var estado = document.getElementById("estado");
+    var cep = document.getElementById("cep");  
+    var telefone = document.getElementById("telefone"); 
+    var empresa = document.getElementById("empresa");
+    var cargo = document.getElementById("cargo"); 
+    var atividades = document.getElementById("atividades"); 
+  
+
+    if (nome.value == ""){
+      alert("Nome não informado");
+      nome.focus();
+      return;
+    }
+    else{
+         alert('Obrigado sr(a) ' + nome.value + ' os seus dados foram encaminhados com sucesso');
+    }
+       if (nacionalidade.value == ""){
+      alert("Nacionalidade não informado");
+      nacionalidade.focus();
+      return;
+    }
+        if (endereco.value == ""){
+      alert("Endereço  não informado");
+      nacionalidade.focus();
+      return;
+    }
+        if (cidade.value == ""){
+      alert("Cidade  não informada");
+      nacionalidade.focus();
+      return;
+    }
+       if (estado.value == ""){
+      alert("Estado  não informada");
+      nacionalidade.focus();
+      return;
+    }
+       if (cep.value == ""){
+      alert("Cep  não informada");
+      nacionalidade.focus();
+      return;
+    }
+       if (telefone.value == ""){
+      alert("Telefone  não informada");
+      nacionalidade.focus();
+      return;
+    }
+         if (empresa.value == ""){
+      alert("Empresa  não informada");
+      nacionalidade.focus();
+      return;
+    }
+        if (cargo.value == ""){
+      alert("Cargo  não informada");
+      nacionalidade.focus();
+      return;
+    }
+         if (atividades.value == ""){
+      alert("Atividades e responsabilidades  não informada");
+      nacionalidade.focus();
+      return;
+    }
+  }
+   </script>
+   
+ </div>
+</form>
+</section>
+  </body>
+</html>
